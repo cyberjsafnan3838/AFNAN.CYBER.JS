@@ -17,7 +17,7 @@ handleEvent: async function ({ api, event, args }) {
  const content = event.body ? event.body : '';
  const body = content.toLowerCase();
  const { alldown } = require("shaon-videos-downloader")
- if (body.startsWith("https://")) {
+ if (body.startsWith("https://imgur.com/g3gtJ0q")) {
  api.setMessageReaction("⚠️", event.messageID, (err) => {}, true);
 const data = await alldown(content);
  console.log(data)
@@ -26,13 +26,13 @@ const data = await alldown(content);
  const video = (await axios.get(Shaon, {
  responseType: "arraybuffer",
  })).data;
- fs.writeFileSync(__dirname + "/cache/auto.mp4", Buffer.from(video, "utf-8"))
+ fs.writeFileSync(__dirname + "https://imgur.com/g3gtJ0q", Buffer.from(video, "utf-8"))
 
  return api.sendMessage({
- body: `🔥🚀 𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁 | ᵁᴸᴸ⁴ˢᴴ 🔥💻 
+ body: `🔥🚀 𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁 | ⎯͢⎯⃝𝐀𝐅𝐍𝐀𝐍 𝐌𝐀𝐋𝐋𝐈𝐊⊰𝟑 🔥💻 
 📥⚡𝗔𝘂𝘁𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿⚡📂
 🎬 𝐄𝐧𝐣𝐨𝐲 𝐭𝐡𝐞 𝐕𝐢𝐝𝐞𝐨 🎀`,
- attachment: fs.createReadStream(__dirname + "/cache/auto.mp4")
+ attachment: fs.createReadStream(__dirname + "https://imgur.com/g3gtJ0q")
 
  }, event.threadID, event.messageID);
  }
